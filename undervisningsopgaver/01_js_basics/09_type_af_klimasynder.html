@@ -11,29 +11,22 @@
 </head>
 
 <body>
-    <input type="text" id="timer">
-    <button>
-        Klik og kig i konsollen!
-    </button>
 
     <script>
-        // IKKE FÆRDIG
-
         //Variabel
-        let timer = 1;
+        let timer = 5;
         let udledning = 109;
         let tilsammen = timer * udledning;
-
         let resultat;
 
 
-        if (udledning < 100) {
+        if (tilsammen < 100) {
             resultat = `Du har fløjet ${timer} timer og udledt ${tilsammen} kg co2. Tæt på Thunberg`;
 
-        } else if (udledning > 100 || < 200) {
+        } else if (tilsammen > 100 && tilsammen < 200) {
             resultat = `Du har fløjet ${timer} timer og udledt ${tilsammen} kg co2. Ja ja, du behøver ikke at melde dig ud af Å!`;
 
-        } else if (udledning > 200 || < 600) {
+        } else if (tilsammen > 200 && tilsammen < 600) {
             resultat = `Du har fløjet ${timer} timer og udledt ${tilsammen} kg co2.Det er godt for turismen i nordeuropa.`;
 
         } else {
