@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lille sød hjemmeside</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <input type="text" id="timer">
+    <button>
+        Klik og kig i konsollen!
+    </button>
+
+    <script>
+        // IKKE FÆRDIG
+
+        //Variabel
+        let timer = 1;
+        let udledning = 109;
+        let tilsammen = timer * udledning;
+
+        let resultat;
+
+
+        if (udledning < 100) {
+            resultat = `Du har fløjet ${timer} timer og udledt ${tilsammen} kg co2. Tæt på Thunberg`;
+
+        } else if (udledning > 100 || < 200) {
+            resultat = `Du har fløjet ${timer} timer og udledt ${tilsammen} kg co2. Ja ja, du behøver ikke at melde dig ud af Å!`;
+
+        } else if (udledning > 200 || < 600) {
+            resultat = `Du har fløjet ${timer} timer og udledt ${tilsammen} kg co2.Det er godt for turismen i nordeuropa.`;
+
+        } else {
+            resultat = `Du har fløjet ${timer} timer og udledt ${tilsammen} kg co2.Nå ja vi kan jo altid kolonisere en anden planet....`;
+        }
+        console.log(resultat);
+
+    </script>
+</body>
+
+</html>
