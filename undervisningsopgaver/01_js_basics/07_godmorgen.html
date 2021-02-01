@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <input type="text" id="navn">
+    <input type="text" id="tid">
     <button>
         Klik og kig i konsollen!
     </button>
@@ -23,20 +23,20 @@
 
         function buttonClicked() {
 
-            let tid = new Date().getHours();
+            let tid = new Date().getHours(24);
 
             let resultat;
 
-            if (tid > 5 < 10) {
+            if (tid 5 || 10) {
                 resultat = "Godmorgen";
 
-                (tid > 10 < 18)
+                (tid 10 || 18)
                 resultat = "Goddag";
 
-                (tid > 18 < 24)
+                (tid 18 || 24)
                 resultat = "Godaften";
 
-                (tid > 24 < 5)
+                (tid 24 || 5)
                 resultat = "Godnat";
             }
 
