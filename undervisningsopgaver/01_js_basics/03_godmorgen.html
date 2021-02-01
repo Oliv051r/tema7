@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lille sød hjemmeside</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <input type="text" id="navn">
+    <button>
+        Klik og kig i konsollen!
+    </button>
+
+
+    <script>
+        /*IKKE FÆRDIG*/
+        document.querySelector("button").addEventListener("click", buttonClicked);
+
+        function buttonClicked() {
+
+            let tid = new Date().getHours();
+
+            let resultat;
+
+            if (tid > 5 < 10) {
+                resultat = "Godmorgen";
+
+                (tid > 10 < 18)
+                resultat = "Goddag";
+
+                (tid > 18 < 24)
+                resultat = "Godaften";
+
+                (tid > 24 < 5)
+                resultat = "Godnat";
+            }
+
+            console.log(resultat);
+
+        }
+
+    </script>
+</body>
+
+</html>
