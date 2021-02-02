@@ -60,6 +60,11 @@
     <footer>This is the footer</footer>
     <script>
         const titel = document.querySelector("header");
+        console.log(titel);
+
+        const undertitel = document.querySelector("h2");
+        console.log(undertitel);
+
         titel.textContent = "Billedgalleri";
         titel.innerHTML = "<h1>Billeder</h1>";
 
@@ -70,6 +75,10 @@
         const pic2 = document.querySelector("article:nth-child(2) img");
         console.log(pic2);
         pic2.alt = "billede af hav";
+
+        let info = document.querySelector("info");
+
+        info.innerHTML = "<h1>Min overskrift til info</h1><img src='ppplaceimg_640_480_any.jpg'>";
 
     </script>
 </body>
