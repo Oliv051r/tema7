@@ -11,37 +11,25 @@
 </head>
 
 <body>
-    <input type="text" id="tid">
-    <button>
-        Klik og kig i konsollen!
-    </button>
 
 
     <script>
-        /*IKKE FÆRDIG*/
-        document.querySelector("button").addEventListener("click", buttonClicked);
+        // man kan skrive const time = 11; så skriver den at klokken er 11.
 
-        function buttonClicked() {
+        const time = new Date().getHours();
+        console.log("Time", time)
 
-            let tid = new Date().getHours(24);
 
-            let resultat;
+        if (time < 5) {
+            console.log("Godnat");
+        } else if (time < 10) {
+            console.log("Godmorgen");
 
-            if (tid 5 || 10) {
-                resultat = "Godmorgen";
+        } else if (time < 10) {
+            console.log("Goddag");
 
-                (tid 10 || 18)
-                resultat = "Goddag";
-
-                (tid 18 || 24)
-                resultat = "Godaften";
-
-                (tid 24 || 5)
-                resultat = "Godnat";
-            }
-
-            console.log(resultat);
-
+        } else {
+            console.log("Godaften");
         }
 
     </script>
