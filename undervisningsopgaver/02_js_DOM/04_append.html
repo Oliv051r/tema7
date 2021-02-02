@@ -76,9 +76,24 @@
         console.log(pic2);
         pic2.alt = "billede af hav";
 
+        /*forkert
         let info = document.querySelector("info");
 
         info.innerHTML = "<h1>Min overskrift til info</h1><img src='ppplaceimg_640_480_any.jpg'>";
+*/
+        let mainSection = document.querySelector("section");
+        //Nyt article element
+        let newArticle = document.createElement("article");
+        //Nyt #H element
+        let overskrift = document.createElement("h3");
+        //tekst til overskrift
+        let overskriftText = document.createTextNode("Article 3");
+        //Indsæt tekst i overskrift
+        overskrift.appendChild(overskriftText);
+        //Tilføj overskrift til article
+        newArticle.appendChild(overskrift);
+        //Tilføj article til section
+        mainSection.appendChild(newArticle);
 
     </script>
 </body>
