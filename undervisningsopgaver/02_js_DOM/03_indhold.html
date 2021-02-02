@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-gap: 20px;
+    }
+
+    article {
+        margin: 10px 0;
+        border: 1px solid #333;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    header,
+    footer {
+        text-align: center;
+    }
+
+    header,
+    footer {
+        padding: 10px 0;
+        border: 1px solid #888;
+    }
+
+</style>
+
+<body>
+    <header>
+        Titel
+    </header>
+    <main>
+
+        <h2>Undertitel</h2>
+        <section>
+            <article>
+                <img src="placeimg_640_480_any.jpg" alt="" class="first">
+                <h3>Article 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ipsum nulla natus, quo omnis, ad voluptatibus vero iusto illo sit ea beatae, obcaecati necessitatibus dolores non! Fugit quibusdam, voluptate quis.</p>
+            </article>
+
+            <article>
+                <img src="pplaceimg_640_480_any.jpg" alt="" class="first">
+                <h3>Article 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ipsum nulla natus, quo omnis, ad voluptatibus vero iusto illo sit ea beatae, obcaecati necessitatibus dolores non! Fugit quibusdam, voluptate quis.</p>
+            </article>
+
+        </section>
+
+    </main>
+    <footer>This is the footer</footer>
+    <script>
+        const titel = document.querySelector("header");
+        titel.textContent = "Billedgalleri";
+        titel.innerHTML = "<h1>Billeder</h1>";
+
+        const pic1 = document.querySelector("article:first-child img");
+        console.log(pic1);
+        pic1.alt = "billede af gang";
+
+        const pic2 = document.querySelector("article:second-child img");
+        console.log(pic2);
+        pic2.alt = "billede af hav";
+
+    </script>
+</body>
+
+</html>
