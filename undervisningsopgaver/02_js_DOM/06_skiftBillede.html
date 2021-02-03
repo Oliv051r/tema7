@@ -96,6 +96,17 @@
             //Tilføj article til section
             mainSection.appendChild(newArticle);
 
+            document.querySelector("article:first-child img").addEventListener("click", skiftbillede);
+
+        }
+
+        function skiftbillede() {
+
+            const pic1 = document.querySelector("article:first-child img");
+            console.log(pic1);
+            pic1.src = "ppplaceimg_640_480_any.jpg";
+            pic1.alt = "billede af gang";
+
         }
 
     </script>
