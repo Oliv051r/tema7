@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>02_visDyr</title>
+</head>
+
+<body>
+
+    <article>
+        <p> Dyr: gris, type: pattedyr, levested: svinefarme</p>
+        <img src="pig.png" alt="Gris" class="first">
+
+    </article>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("Dom er loaded");
+
+            let gris = {
+                "fornavn": "gris",
+                "type": "pattedyr",
+                "billede": "http://mabe-kea.dk/E19/pics/pig.png",
+                "levested": "svinefarme"
+            }
+
+            console.log(`dyr: ${gris.fornavn}, type: ${gris.type}, levested: ${gris.levested}`);
+        }
+
+    </script>
+</body>
+
+</html>
