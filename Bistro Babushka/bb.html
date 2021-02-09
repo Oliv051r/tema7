@@ -28,12 +28,48 @@
         }
 
         .valgt {
-            background-color: lightpink;
+            background-color: wheat;
         }
 
         header {
             text-align: center;
         }
+
+        button {
+            background-color: antiquewhite;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            padding: 10px;
+            /*cursor: pointer;*/
+            width: 100px;
+            border: 100px;
+        }
+
+        button:hover {
+            background-color: wheat;
+            color: black;
+        }
+
+        h1 {
+            color: #000000;
+            font-size: 3rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        p,
+        h2 {
+            color: #000000;
+            font-size: 1rem;
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.9rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+        }
+
+        /*
+      
     </style>
 
 </head>
@@ -45,6 +81,7 @@
             <button data-kategori="alle" class="valgt">Alle</button>
             <button data-kategori="forretter">Forretter</button>
             <button data-kategori="hovedretter">Hovedretter</button>
+            <button data-kategori="sideorders">Side orders</button>
             <button data-kategori="desserter">Desserter</button>
             <button data-kategori="drikkevarer">Drikkevarer</button>
         </nav>
@@ -87,7 +124,7 @@
             document.querySelector(".valgt").classList.remove("valgt"); //fjern classe valgt fra den knap
             this.classList.add("valgt") //maker den knap der er klikket på
 
-            visRetter(); // kald funktionen visPersoner efter det nye filter er sat på 
+            visRetter(); // kald funktionen visRetter efter det nye filter er sat på 
             header.textContent = this.textContent;
         }
 
@@ -100,7 +137,7 @@
             visRetter();
         }
 
-        //funktion der viser personer i liste view
+        //funktion der viser retter i liste view
         function visRetter() {
 
             const dest = document.querySelector("#liste"); // container til articles med en person
