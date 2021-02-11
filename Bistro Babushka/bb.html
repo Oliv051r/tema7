@@ -4,12 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
     <title></title>
     <style>
-        body {
-            font-family: sans-serif;
-        }
-
         img {
             width: 100%;
         }
@@ -23,8 +24,7 @@
 
         .retter {
             padding: 1em;
-            border: 1px solid;
-            border-radius: 1em;
+
         }
 
         .valgt {
@@ -32,17 +32,18 @@
         }
 
         header {
-            text-align: center;
+            margin-left: 30px;
         }
 
         button {
             background-color: antiquewhite;
             border-radius: 10px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
             padding: 10px;
             /*cursor: pointer;*/
             width: 100px;
             border: 100px;
+
         }
 
         button:hover {
@@ -52,12 +53,20 @@
 
         h1 {
             color: #000000;
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-family: 'Russo One', sans-serif;
+            margin-left: 30vw;
+            margin-top: 7vw;
+
         }
 
-        p,
-        h2 {
+        header img {
+            margin-left: -10vw;
+            margin-top: -5vw;
+
+        }
+
+        p {
             color: #000000;
             font-size: 1rem;
             font-family: 'Raleway', sans-serif;
@@ -65,19 +74,21 @@
         }
 
         h2 {
-            font-size: 1.4rem;
-        }
+            font-size: 1.7rem;
+            font-family: 'Russo One', sans-serif;
+            color: #000000;
 
-        /*
-      
+        }
     </style>
 
 </head>
 
 <body>
     <header>
-        <h1>Alle</h1>
+        <h1>Bistro Babushka</h1>
+        <img height="320" width="320" src="billede/babushka.svg" alt="babushka dukke">
         <nav>
+            <h2>Alle</h2>
             <button data-kategori="alle" class="valgt">Alle</button>
             <button data-kategori="forretter">Forretter</button>
             <button data-kategori="hovedretter">Hovedretter</button>
@@ -90,9 +101,9 @@
     <section id="liste"></section>
 
     <template>
-        <article class="retter">
+        <article class="ret">
             <img src="" alt="" class="billede">
-            <h2 class="navn"> </h2>
+            <h3 class="navn"> </h3>
             <p class="kortbeskrivelse">Kort beskrivelse: </p>
             <p class="pris">Pris: </p>
             <p class="oprindelsesregion"> Oprindelsesregion: </p>
@@ -102,8 +113,8 @@
 
 
     <script>
-        const header = document.querySelector("header h1");
-        const url = "https://babushka-dd8a.restdb.io/rest/menu";
+        const header = document.querySelector("nav h2");
+
         const medieurl = "https://babushka-dd8a.restdb.io/media/";
         const myHeaders = {
 
@@ -159,13 +170,21 @@
 
                     klon.querySelector(".kortbeskrivelse").textContent += ret.kortbeskrivelse;
 
-                    klon.querySelector(".pris").textContent += ret.pris;
+                    klon.querySelector(".pris").textContent += ret.pris + `${",-"}`;
 
                     klon.querySelector(".oprindelsesregion").textContent += ret.oprindelsesregion;
+
+                    klon.querySelector(".ret").addEventListener("click", () => visDetaljer(ret));
+
 
                     dest.appendChild(klon);
                 }
             })
+        }
+
+        function visDetaljer(single) {
+
+            location.href = `babushka-single.html?id=${single._id}`;
         }
     </script>
 </body></html>
